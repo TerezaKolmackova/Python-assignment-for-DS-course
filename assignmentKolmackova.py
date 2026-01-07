@@ -1,4 +1,4 @@
-#Python assignment for the course Data Steward, modul 2
+#Python assignment for the course Data Steward, Module 2
 #Tereza Kolmačková
 #Date: 2025-01-07
 
