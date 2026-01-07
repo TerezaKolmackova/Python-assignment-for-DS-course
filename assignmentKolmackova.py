@@ -31,11 +31,7 @@ def calculate_mean_temperature(filename):
 
     mean_temperature = sum(temperatures) / len(temperatures)
     return mean_temperature
-
-if __name__ == "__main__":
-    filename = "WeatherData.txt"
-    mean_temp = calculate_mean_temperature(filename)
-    print(f"Mean ambient air temperature is {mean_temp:.2f} °C.")
+  
     
 #Calculating hours with temperature below 0
 def count_hours_below_zero(filename):
@@ -48,9 +44,15 @@ def count_hours_below_zero(filename):
             columns = line.strip().split(',')
             temperature = float(columns[3])
             if temperature < 0:
-                count += 1
+                count = count+1
 
     return count
+
+#Print mean temparature and number of hours with temperature below 0
+filename = "WeatherData.txt"
+
+mean_temp = calculate_mean_temperature(filename)
+print(f"Mean ambient air temperature is {mean_temp:.2f} °C.")
 
 hours_below_zero = count_hours_below_zero(filename)
 print(f"Number of hours with temperature below 0°C is {hours_below_zero}.")
